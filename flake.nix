@@ -9,7 +9,7 @@
             modules = [
                 ./configuration.nix
                 ./modules
-                ./user
+                ./users
             ];
         };
     };
