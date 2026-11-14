@@ -36,7 +36,6 @@
         curl
         wget
         pulseaudio
-        kdePackages.xdg-desktop-portal-kde
         btop
         (python3.withPackages (python-pkgs:
             with python-pkgs; [

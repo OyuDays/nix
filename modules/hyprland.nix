@@ -10,10 +10,21 @@
     };
     xdg.portal = {
         enable = true;
-        extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
+        extraPortals = with pkgs; [
+            xdg-desktop-portal-hyprland
+            kdePackages.xdg-desktop-portal-kde
+        ];
+        config = {
+            hyprland = {
+                default = [ "hyprland" "kde" ];
+                "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
+            };
+        };
+
     };
     hj.packages = with pkgs; [
         xdg-desktop-portal-hyprland
+        kdePackages.xdg-desktop-portal-kde
         hyprpaper
         hypridle
         hyprlock
