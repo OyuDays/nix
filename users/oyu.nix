@@ -40,7 +40,6 @@ in {
                 })
                 obs-cmd
                 mpv
-                nerd-fonts.hack
             ];
             files = {
                 ".gitconfig".source = dots + "/.gitconfig";

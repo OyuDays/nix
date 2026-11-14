@@ -6,5 +6,6 @@
         ./quickshell.nix
         ./tack.nix
         ./flatpak.nix
+        ./fonts.nix
     ];
 }
