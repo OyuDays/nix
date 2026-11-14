@@ -43,6 +43,7 @@ in {
                 ripgrep
                 bat
                 picard
+                (callPackage ./scripts/organize-music.nix { })
             ];
             files = {
                 ".gitconfig".source = dots + "/.gitconfig";
