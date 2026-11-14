@@ -5,5 +5,6 @@
         ./hyprland.nix
         ./quickshell.nix
         ./tack.nix
+        ./flatpak.nix
     ];
 }

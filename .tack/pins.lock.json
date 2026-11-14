@@ -2,7 +2,8 @@
   "$declared": {
     "hjem": "github:feel-co/hjem",
     "hjem-impure": "github:Rexcrazy804/hjem-impure",
-    "nixpkgs": "github:NixOS/nixpkgs/nixpkgs-unstable",
+    "nix-flatpak": "github:gmodena/nix-flatpak",
+    "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
     "quickshell": "git+https://git.outfoxxed.me/outfoxxed/quickshell",
     "tack": "github:manic-systems/tack"
   },
@@ -22,13 +23,20 @@
     "narHash": "sha256-xkatHz2jk+a9ItymU6zVob3LO5mOyGhYr4EAg38U4KM=",
     "lastModified": 1791632013
   },
-  "nixpkgs": {
+  "nix-flatpak": {
     "type": "github",
-    "owner": "NixOS",
-    "repo": "nixpkgs",
-    "rev": "2074cc672349f14240fb7ea90d509e0b643e9dd4",
-    "narHash": "sha256-E0hYoioqUtM2XmPPvYYpJgdADF5AW9oOoPSEiM9dTHQ=",
-    "lastModified": 1794495034
+    "owner": "gmodena",
+    "repo": "nix-flatpak",
+    "rev": "02656785ab214fa1c9655f1beaaf0269eeeec2ca",
+    "narHash": "sha256-f7Z4PmfnRxf7+37NN48ep+KsQauGtL5REE99pJtMNp8=",
+    "lastModified": 1791644268
+  },
+  "nixpkgs": {
+    "type": "tarball",
+    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1117658.d4f25a3e5620/nixexprs.tar.zst?rev=d4f25a3e562008648d45bcf2d70bcc7422cad84e&lastModified=1794386569",
+    "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
+    "narHash": "sha256-W60urNAgQVS8bhNWH0bQsYoiagds8m38oTDUjEOM9FE=",
+    "lastModified": 1794386569
   },
   "quickshell": {
     "type": "git",

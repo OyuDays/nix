@@ -69,3 +69,6 @@ url = "github:feel-co/hjem"
 
 [inputs.hjem-impure]
 url = "github:Rexcrazy804/hjem-impure"
+
+[inputs.nix-flatpak]
+url = "github:gmodena/nix-flatpak"
