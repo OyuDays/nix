@@ -18,7 +18,11 @@
         };
     };
 
-    outputs = { self, nixpkgs, ...}@inputs: {
+    outputs = {
+        self,
+        nixpkgs,
+        ...
+    } @ inputs: {
         nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
             specialArgs = { inherit inputs; };
             modules = [

@@ -1,4 +1,10 @@
-{ self, config, pkgs, inputs, ... }: let
+{
+    self,
+    config,
+    pkgs,
+    inputs,
+    ...
+}: let
     dots = "${./conf}";
 in {
     # Define a user account. Don't forget to set a password with ‘passwd’.

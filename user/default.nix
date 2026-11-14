@@ -1,4 +1,10 @@
-{ self, config, pkgs, inputs, ... }: {
+{
+    self,
+    config,
+    pkgs,
+    inputs,
+    ...
+}: {
     imports = [
         ./oyu.nix
     ];

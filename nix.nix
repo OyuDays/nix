@@ -3,14 +3,13 @@
     inputs,
     pkgs,
     ...
-}:
-{
+}: {
     nix = {
         package = pkgs.nixVersions.latest;
         channel.enable = false; # we use le flakes
-            registry = {
-                nixpkgs.flake = inputs.nixpkgs;
-            };
+        registry = {
+            nixpkgs.flake = inputs.nixpkgs;
+        };
         settings = {
             experimental-features = [
                 "nix-command"
