@@ -40,6 +40,9 @@ in {
                 })
                 obs-cmd
                 mpv
+                ripgrep
+                bat
+                picard
             ];
             files = {
                 ".gitconfig".source = dots + "/.gitconfig";
