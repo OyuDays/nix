@@ -4,5 +4,6 @@
         ./hjem.nix
         ./hyprland.nix
         ./quickshell.nix
+        ./tack.nix
     ];
 }
