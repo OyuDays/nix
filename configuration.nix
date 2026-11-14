@@ -35,7 +35,6 @@
         lua
         curl
         wget
-        git
         pulseaudio
         kdePackages.xdg-desktop-portal-kde
         xdg-desktop-portal-hyprland
@@ -61,15 +60,17 @@
     qt.enable = true;
 
     # Install firefox.
-    programs.firefox.enable = true;
+    programs = {
+        firefox.enable = true;
 
-    programs.bash.enable = true;
-    programs.bash.completion.enable = true;
+        bash.enable = true;
+        bash.completion.enable = true;
 
-    # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
+        nh.enable = true;
 
-    programs.nh.enable = true;
+        git.enable = true;
+    };
+
 
     networking.hostName = "nixos"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -79,7 +80,7 @@
     # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
     # Enable networking
-        networking.networkmanager.enable = true;
+    networking.networkmanager.enable = true;
 
     # Set your time zone.
     time.timeZone = "Europe/Stockholm";
