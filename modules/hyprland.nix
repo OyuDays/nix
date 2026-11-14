@@ -1,5 +1,5 @@
 {
-    config,
+    inputs,
     pkgs,
     ...
 }: {
@@ -12,4 +12,10 @@
         enable = true;
         extraPortals = with pkgs; [ xdg-desktop-portal-hyprland ];
     };
+    hj.packages = with pkgs; [
+        xdg-desktop-portal-hyprland
+        hyprpaper
+        hypridle
+        hyprlock
+    ];
 }

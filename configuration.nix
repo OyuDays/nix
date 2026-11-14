@@ -10,8 +10,6 @@
     imports = [
         # Include the results of the hardware scan.
         ./hardware-configuration.nix
-        ./hyprland.nix
-        ./nix.nix
     ];
 
     # Use the systemd-boot EFI boot loader.
@@ -39,19 +37,11 @@
         wget
         pulseaudio
         kdePackages.xdg-desktop-portal-kde
-        xdg-desktop-portal-hyprland
-        hyprpaper
-        hypridle
-        hyprlock
         btop
         (python3.withPackages (python-pkgs:
             with python-pkgs; [
                 psutil
             ]))
-        (inputs.quickshell.packages.${pkgs.system}.default.withModules [
-            kdePackages.kirigami
-        ])
-        inputs.tack.packages.${pkgs.system}.default
         kdePackages.breeze
         kdePackages.breeze-gtk
     ];

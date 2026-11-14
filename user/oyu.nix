@@ -3,11 +3,16 @@
     config,
     pkgs,
     inputs,
+    lib,
     ...
 }: let
     dots = "${./conf}";
 in {
     # Define a user account. Don't forget to set a password with ‘passwd’.
+    imports = [
+        (lib.mkAliasOptionModule [ "hj" ] [ "hjem" "users" "oyu" ])
+    ];
+
     users.users."oyu" = {
         isNormalUser = true;
         description = "cat w. computer";
