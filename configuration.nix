@@ -51,6 +51,7 @@
         (inputs.quickshell.packages.${pkgs.system}.default.withModules [
             kdePackages.kirigami
         ])
+        inputs.tack.packages.${pkgs.system}.default
         kdePackages.breeze
         kdePackages.breeze-gtk
     ];

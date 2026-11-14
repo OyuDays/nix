@@ -1,0 +1,49 @@
+{
+  "$declared": {
+    "hjem": "github:feel-co/hjem",
+    "hjem-impure": "github:Rexcrazy804/hjem-impure",
+    "nixpkgs": "github:NixOS/nixpkgs/nixpkgs-unstable",
+    "quickshell": "git+https://git.outfoxxed.me/outfoxxed/quickshell",
+    "tack": "github:manic-systems/tack"
+  },
+  "hjem": {
+    "type": "github",
+    "owner": "feel-co",
+    "repo": "hjem",
+    "rev": "5469a3ae3cd5cc182ddc4201a21a8de44b2c26f2",
+    "narHash": "sha256-N6aGkpxbDeisIUygDapIVX2aXZuGEK4kRmUPMhtu1zc=",
+    "lastModified": 1794572558
+  },
+  "hjem-impure": {
+    "type": "github",
+    "owner": "Rexcrazy804",
+    "repo": "hjem-impure",
+    "rev": "9f54caff3b90d48e710dbadf523e181a549f09ee",
+    "narHash": "sha256-xkatHz2jk+a9ItymU6zVob3LO5mOyGhYr4EAg38U4KM=",
+    "lastModified": 1791632013
+  },
+  "nixpkgs": {
+    "type": "github",
+    "owner": "NixOS",
+    "repo": "nixpkgs",
+    "rev": "2074cc672349f14240fb7ea90d509e0b643e9dd4",
+    "narHash": "sha256-E0hYoioqUtM2XmPPvYYpJgdADF5AW9oOoPSEiM9dTHQ=",
+    "lastModified": 1794495034
+  },
+  "quickshell": {
+    "type": "git",
+    "url": "https://git.outfoxxed.me/outfoxxed/quickshell",
+    "ref": "HEAD",
+    "rev": "9b0f339b19057f4731bf3b48293307d7ef241671",
+    "narHash": "sha256-TiCGqLMpNIy7FERewgfKVluPsLVF96uc6x6xwZnMjdQ=",
+    "lastModified": 1792651682
+  },
+  "tack": {
+    "type": "github",
+    "owner": "manic-systems",
+    "repo": "tack",
+    "rev": "c107b0fc252b0b33b01e6b7d6111aaaedc49613e",
+    "narHash": "sha256-bdNCaHUF3c8hgsYw6FCI+lGcZanZIDxt2Sefu5AsERY=",
+    "lastModified": 1794450976
+  }
+}
