@@ -16,7 +16,7 @@
         ];
         config = {
             hyprland = {
-                default = [ "hyprland" "kde" ];
+                default = [ "hyprland" "kde" "gtk" ];
                 "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
             };
         };
@@ -25,6 +25,7 @@
     hj.packages = with pkgs; [
         xdg-desktop-portal-hyprland
         kdePackages.xdg-desktop-portal-kde
+        xdg-desktop-portal-gtk
         hyprpaper
         hypridle
         hyprlock
