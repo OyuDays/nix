@@ -249,7 +249,7 @@ hl.config({
         enable_anr_dialog = false,
 
         enable_swallow = true,
-        swallow_regex = "foot"
+        swallow_regex = "dev.notashelf.beer"
     },
 })
 

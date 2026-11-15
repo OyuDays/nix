@@ -1,5 +1,6 @@
 //@ pragma UseQApplication
 //@ pragma Env QS_NO_RELOAD_POPUP=1
+//@ pragma IconTheme Breeze-Light
 
 import Quickshell
 import Quickshell.Io

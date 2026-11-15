@@ -21,8 +21,8 @@
                     colors = {
                         foreground = "#dcdfe4";
                         background = "#282c34";
-                        selection-foreground = "#000000";
-                        selection-background = "#fffacd";
+                        #selection-foreground = "#000000";
+                        #selection-background = "#fffacd";
                         regular = [
                             "#282c34"
                             "#e06c75"
@@ -43,9 +43,6 @@
                             "#56b6c2"
                             "#dcdfe4"
                         ];
-                    };
-                    cursor = {
-                        style = "beam";
                     };
                 };
             };
