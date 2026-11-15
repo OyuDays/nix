@@ -46,7 +46,6 @@ in {
                 slurp
                 grim
                 grimblast
-                catppuccin-cursors
                 rofi
                 wl-clipboard
                 wayfreeze
@@ -56,8 +55,6 @@ in {
                 (python3.withPackages (python-pkgs: with python-pkgs; [
                     psutil
                 ]))
-                kdePackages.breeze
-                kdePackages.breeze-gtk
             ];
             files = {
                 ".gitconfig".source = dots + "/.gitconfig";

@@ -8,5 +8,6 @@
         ./flatpak.nix
         ./fonts.nix
         ./beer.nix
+        ./theme.nix
     ];
 }
