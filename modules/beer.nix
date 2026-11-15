@@ -18,10 +18,34 @@
                         pad-x = 2;
                         pad-y = 2;
                     };
-                    key-bindings = {
-                        "Ctrl+Shfit+C" = "copy";
-                        "Ctrl+Shfit+V" = "paste";
-                        "Ctrl+Shfit+F" = "search";
+                    colors = {
+                        foreground = "#dcdfe4";
+                        background = "#282c34";
+                        selection-foreground = "#000000";
+                        selection-background = "#fffacd";
+                        regular = [
+                            "#282c34"
+                            "#e06c75"
+                            "#98c379"
+                            "#e5c07b"
+                            "#61afef"
+                            "#c678dd"
+                            "#56b6c2"
+                            "#dcdfe4"
+                        ];
+                        bright = [
+                            "#5d677a"
+                            "#e06c75"
+                            "#98c379"
+                            "#e5c07b"
+                            "#61afef"
+                            "#c678dd"
+                            "#56b6c2"
+                            "#dcdfe4"
+                        ];
+                    };
+                    cursor = {
+                        style = "beam";
                     };
                 };
             };
