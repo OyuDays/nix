@@ -21,28 +21,12 @@
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
     environment.systemPackages = with pkgs; [
-        alejandra
-        catppuccin-cursors
-        restic
-        rofi
-        wayfreeze
-        slurp
-        grim
-        grimblast
-        wl-clipboard
         neovim
         luarocks
         lua
         curl
         wget
         pulseaudio
-        btop
-        (python3.withPackages (python-pkgs:
-            with python-pkgs; [
-                psutil
-            ]))
-        kdePackages.breeze
-        kdePackages.breeze-gtk
     ];
     environment.variables.EDITOR = "nvim";
 

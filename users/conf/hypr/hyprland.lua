@@ -48,7 +48,7 @@ end
 ---------------------
 
 -- Set programs that you use
-local terminal    = "foot"
+local terminal    = "beer"
 local fileManager = "dolphin"
 local menu        = "rofi -show combi"
 

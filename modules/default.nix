@@ -7,5 +7,6 @@
         ./tack.nix
         ./flatpak.nix
         ./fonts.nix
+        ./beer.nix
     ];
 }

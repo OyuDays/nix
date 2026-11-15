@@ -72,3 +72,6 @@ url = "github:Rexcrazy804/hjem-impure"
 
 [inputs.nix-flatpak]
 url = "github:gmodena/nix-flatpak"
+
+[inputs.beer]
+url = "git+https://git.notashelf.dev/notashelf/beer"

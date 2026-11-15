@@ -1,11 +1,20 @@
 {
   "$declared": {
+    "beer": "git+https://git.notashelf.dev/notashelf/beer",
     "hjem": "github:feel-co/hjem",
     "hjem-impure": "github:Rexcrazy804/hjem-impure",
     "nix-flatpak": "github:gmodena/nix-flatpak",
     "nixpkgs": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst",
     "quickshell": "git+https://git.outfoxxed.me/outfoxxed/quickshell",
     "tack": "github:manic-systems/tack"
+  },
+  "beer": {
+    "type": "git",
+    "url": "https://git.notashelf.dev/notashelf/beer",
+    "ref": "HEAD",
+    "rev": "eae4c94432350d69ebbe749d2b2f860f447a8fcb",
+    "narHash": "sha256-1iHqo6XM8bViqiXDownEorSQ/ZCRuI+a+/L1M4LUGkM=",
+    "lastModified": 1794414607
   },
   "hjem": {
     "type": "github",

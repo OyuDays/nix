@@ -33,7 +33,6 @@ in {
                 prismlauncher
                 steam
                 equibop
-                foot
                 spotify
                 (wrapOBS {
                     plugins = with obs-studio-plugins; [];
@@ -44,6 +43,21 @@ in {
                 bat
                 picard
                 (callPackage ./scripts/organize-music.nix {})
+                slurp
+                grim
+                grimblast
+                catppuccin-cursors
+                rofi
+                wl-clipboard
+                wayfreeze
+                btop
+                alejandra
+                restic
+                (python3.withPackages (python-pkgs: with python-pkgs; [
+                    psutil
+                ]))
+                kdePackages.breeze
+                kdePackages.breeze-gtk
             ];
             files = {
                 ".gitconfig".source = dots + "/.gitconfig";
