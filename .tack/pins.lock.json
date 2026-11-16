@@ -1,6 +1,6 @@
 {
   "$declared": {
-    "beer": "git+https://git.notashelf.dev/notashelf/beer",
+    "beer": "git+https://git.notashelf.dev/notashelf/beer.git",
     "hjem": "github:feel-co/hjem",
     "hjem-impure": "github:Rexcrazy804/hjem-impure",
     "nix-flatpak": "github:gmodena/nix-flatpak",
@@ -10,19 +10,19 @@
   },
   "beer": {
     "type": "git",
-    "url": "https://git.notashelf.dev/notashelf/beer",
+    "url": "https://git.notashelf.dev/notashelf/beer.git",
     "ref": "HEAD",
-    "rev": "eae4c94432350d69ebbe749d2b2f860f447a8fcb",
-    "narHash": "sha256-1iHqo6XM8bViqiXDownEorSQ/ZCRuI+a+/L1M4LUGkM=",
-    "lastModified": 1794414607
+    "rev": "59d955641152626521e85dabe3271f511c9e0b28",
+    "narHash": "sha256-jvnC9+PYb+8mAvRPgTAR4OxRhwDRsuuSH9YDsT54yMk=",
+    "lastModified": 1794816000
   },
   "hjem": {
     "type": "github",
     "owner": "feel-co",
     "repo": "hjem",
-    "rev": "5469a3ae3cd5cc182ddc4201a21a8de44b2c26f2",
-    "narHash": "sha256-N6aGkpxbDeisIUygDapIVX2aXZuGEK4kRmUPMhtu1zc=",
-    "lastModified": 1794572558
+    "rev": "2f56c85f80a52c23fb3e956119ca80975a2b9ceb",
+    "narHash": "sha256-k/nDw1zTlCmhA2K3odt/gy4uDiS002x8Nc14lQxvpY8=",
+    "lastModified": 1794842388
   },
   "hjem-impure": {
     "type": "github",
@@ -42,10 +42,10 @@
   },
   "nixpkgs": {
     "type": "tarball",
-    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1117658.d4f25a3e5620/nixexprs.tar.zst?rev=d4f25a3e562008648d45bcf2d70bcc7422cad84e&lastModified=1794386569",
-    "rev": "d4f25a3e562008648d45bcf2d70bcc7422cad84e",
-    "narHash": "sha256-W60urNAgQVS8bhNWH0bQsYoiagds8m38oTDUjEOM9FE=",
-    "lastModified": 1794386569
+    "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1119549.d5cc68339997/nixexprs.tar.zst?rev=d5cc6833999746cffdfe0598f7bc801a57b887a9&lastModified=1794537146",
+    "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
+    "narHash": "sha256-bTKSclXJAmo9qdxPedTBHUGr8awPr4BrbOoOutJsYIc=",
+    "lastModified": 1794537146
   },
   "quickshell": {
     "type": "git",
@@ -59,8 +59,8 @@
     "type": "github",
     "owner": "manic-systems",
     "repo": "tack",
-    "rev": "c107b0fc252b0b33b01e6b7d6111aaaedc49613e",
-    "narHash": "sha256-bdNCaHUF3c8hgsYw6FCI+lGcZanZIDxt2Sefu5AsERY=",
-    "lastModified": 1794450976
+    "rev": "adf2b67865789ffee0df3fae53197b2ee9db42cd",
+    "narHash": "sha256-FXRXMI4NvbhSZFKQn5fOg9f2IWnqL3rb6O1WmX8oUeA=",
+    "lastModified": 1794822728
   }
 }
