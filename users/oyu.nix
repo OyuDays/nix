@@ -40,6 +40,9 @@ in {
                 obs-cmd
                 mpv
                 nicotine-plus
+                gimp
+                krita
+                kdePackages.kolourpaint
                 ripgrep
                 bat
                 picard
