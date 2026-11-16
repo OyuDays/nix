@@ -39,6 +39,7 @@ in {
                 })
                 obs-cmd
                 mpv
+                nicotine-plus
                 ripgrep
                 bat
                 picard
