@@ -42,9 +42,9 @@ class ParsedSong:
 		if self.track_nr is not None and (self.album.total_tracks is None or self.album.total_tracks > 1):
 			filename += f"{self.track_nr:02}. "
 
-		filename += f"{self.title}.{self.file_ext}"
+		filename += f"{self.title}"
 
-		return filename
+		return create_file_name(filename, self.file_ext)
 
 class ParsedAlbum:
 	def __init__(
@@ -111,11 +111,30 @@ class ParsedAlbum:
 #
 #			if highest_artist is not None:
 #				dirname = artist
-		return dirname
+
+		return create_file_name(dirname)
 
 	def get_album_directory(self):
-		return self.deduplicated_name if self.deduplicated_name is not None else self.album_name
+		return create_file_name(self.deduplicated_name if self.deduplicated_name is not None else self.album_name)
 
+
+
+FILENAME_LENGTH_LIMIT = 255
+def create_file_name(name: str, file_ext: str = None) -> str:
+	name_bytes = name.encode("utf-8")
+	ext_bytes = f".{file_ext}".encode("utf-8") if file_ext is not None else b''
+
+	# i can not be bothered to deal with unicode so this just removes 
+	# whatever python considers to be "characters" one by one,
+	# praying that there are no characters consisting of several code points,
+	# until the byte length is short enough that a reasonable filesystem can cope with it
+	# yes this was necessary for some real actual music in my real actual library
+	while (len(name_bytes) + len(ext_bytes)) > FILENAME_LENGTH_LIMIT:
+		name = name[:len(name) - 1]
+		name_bytes = name.encode("utf-8")
+
+	return f"{name}.{file_ext}" if file_ext is not None else name
+		
 
 
 def song_has_required_tags(song, file: Path, tags: list) -> bool:
