@@ -92,25 +92,6 @@ class ParsedAlbum:
 		dirname = self.album_artist
 		if self.album_artists is not None and len(self.album_artists) > 0:
 			dirname = self.album_artists[0]
-#		else:
-#			artist_frequencies = {}
-#			for song in self.songs:
-#				if song.artists is not None and len(song.artists) > 0:
-#					artist = song.artists[0]
-#					if artist in artist_frequencies:
-#						artist_frequencies[artist] += 1
-#					else:
-#						artist_frequencies[artist] = 0
-#			
-#			highest_count = 0
-#			highest_artist = None
-#			for artist, count in artist_frequencies.items():
-#				if count > highest_count:
-#					highest_count = count
-#					highest_artist = artist
-#
-#			if highest_artist is not None:
-#				dirname = artist
 
 		return create_file_name(dirname)
 
@@ -121,6 +102,7 @@ class ParsedAlbum:
 
 FILENAME_LENGTH_LIMIT = 255
 def create_file_name(name: str, file_ext: str = None) -> str:
+	name = name.replace('/', '⁄')
 	name_bytes = name.encode("utf-8")
 	ext_bytes = f".{file_ext}".encode("utf-8") if file_ext is not None else b''
 
@@ -176,7 +158,6 @@ def get_albums(src_dir: Path) -> list:
 		title = title.replace('/', '⁄')
 
 		album = song["album"][0]
-
 
 		artist = song["artist"][0]
 
