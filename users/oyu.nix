@@ -27,7 +27,7 @@ in {
             impure = {
                 enable = true;
                 dotsDir = dots;
-                dotsDirImpure = "/etc/nixos/user/conf";
+                dotsDirImpure = "/etc/nixos/users/conf";
             };
             packages = with pkgs; [
                 prismlauncher
@@ -56,6 +56,7 @@ in {
                 btop
                 alejandra
                 restic
+                kdePackages.kdenlive
                 (python3.withPackages (python-pkgs: with python-pkgs; [
                     psutil
                 ]))
