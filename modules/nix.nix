@@ -25,7 +25,7 @@
             flake-registry = "";
             extra-substituters = [
                 "https://nix-community.cachix.org"
-                "https://ci.manic.systems"
+                "https://cache.manic.systems"
                 "https://cache.nixos-cuda.org"
                 "https://hyprland.cachix.org"
             ];
