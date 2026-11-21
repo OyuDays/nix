@@ -46,6 +46,8 @@
         nh.enable = true;
 
         git.enable = true;
+
+        direnv.enable = true;
     };
 
     networking.hostName = "nixos"; # Define your hostname.

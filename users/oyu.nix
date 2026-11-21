@@ -65,6 +65,7 @@ in {
                 ".gitconfig".source = dots + "/.gitconfig";
                 ".config/quickshell".source = dots + "/quickshell";
                 ".config/hypr".source = dots + "/hypr";
+                ".config/nvim".source = dots + "/nvim";
             };
         };
     };
