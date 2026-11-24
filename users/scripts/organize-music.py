@@ -136,7 +136,7 @@ def song_has_required_tags(song, file: Path, tags: list) -> bool:
 
 def get_albums(src_dir: Path) -> list:
 
-	albums = {}
+	albums = dict()
 	for file in itertools.chain(src_dir.rglob('*.flac'), src_dir.rglob('*.opus'), src_dir.rglob('*.mp3')):
 		song = mutagen.File(file)
 		file_ext = None
@@ -233,31 +233,54 @@ def get_albums(src_dir: Path) -> list:
 
 
 def resolve_duplicates(albums: list) -> int:
-	unresolved_duplicates = 0
-	album_set = {}
+	album_set = dict()
+	duplicate_set = dict()
 	for album in albums:
 		if album.album_name in album_set:
-			other_album = album_set[album.album_name]
-			if album.region != other_album.region:
-				other_album.deduplicated_name = f"{other_album.album_name} ({other_album.region})"
-				album.deduplicated_name = f"{album.album_name} ({album.region})"
-			else:
-				other_album.deduplicated_name = f"{other_album.album_name} ({other_album.release_date})"
-				album.deduplicated_name = f"{album.album_name} ({album.release_date})"
+			if album.album_name not in duplicate_set:
+				duplicate_set[album.album_name] = [ album_set[album.album_name] ]
 
-			if other_album.deduplicated_name == album.deduplicated_name:
-				unresolved_duplicates += 1
-				print(f"unresolved duplicate: {album.album_artist - album.album_name}")
+			duplicate_set[album.album_name].append(album)
+
+		album_set[album.album_name] = album
+
+	if len(duplicate_set) > 0:
+		print(f"{len(duplicate_set)} duplicate album names !")
+
+	for duplicates in duplicate_set.values():
+		regions = set()
+		regions_unique = True
+		dates = set()
+		dates_unique = True
+		for album in duplicates:
+			if album.region in regions:
+				regions_unique = False
+
+			if album.release_date in dates:
+				dates_unique = False
+
+			regions.add(album.region)
+			dates.add(album.release_date)
+
+		if regions_unique:
+			print(f"resolved duplicate album name {album.album_artist} - {album.album_name} based on region code")
+			for album in duplicates:
+				album.deduplicated_name = f"{album.album_name}{f" ({album.region})" if album.region is not None else ""}"
+		elif dates_unique:
+			print(f"resolved duplicate album name {album.album_artist} - {album.album_name} based on release date")
+			for album in duplicates:
+				album.deduplicated_name = f"{album.album_name}{f" ({album.release_date})" if album.release_date is not None else ""}"
 		else:
-			album_set[album.album_name] = album
-
-	return unresolved_duplicates
-
+			i = 1
+			print(f"resolved duplicate album name {album.album_artist} - {album.album_name} based on absolutely nothing")
+			for album in duplicates:
+				album.deduplicated_name = f"{album.album_name} ({i})"
+				i += 1
 
 
 def organize(src_dir: Path, dst_dir: Path, albums: list, copy: bool, verbose: bool, dry_run: bool) -> tuple[int, dict]:
 	songs_skipped = 0
-	remaps = {}
+	remaps = dict()
 	for album in albums:
 
 		album_dir = f"{dst_dir}/{album.get_artist_directory()}/{album.get_album_directory()}/"
@@ -359,10 +382,8 @@ def organizer_run(args) -> int:
 
 	albums = get_albums(src_dir)
 	print(f"found {len(albums)} albums")
-	unresolved_duplicates = resolve_duplicates(albums)
-	if unresolved_duplicates != 0 and not args.force:
-		printf(f"failed to resolve {unresolved_duplicates} duplicates. use --force continue regardless")
-		return -1
+	
+	resolve_duplicates(albums)
 
 	skipped, remaps = organize(src_dir, dst_dir, albums, copy=not args.delete, verbose=verbose, dry_run=dry_run)
 	print(f"successfully moved {len(remaps)} files{f", and skipped {skipped} for fun" if skipped > 0 else ""}")
